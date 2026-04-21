@@ -71,3 +71,9 @@ content{
     font-weight: 600;
 }
 
+.result{
+    font-style: 20px;
+    line-height: 120%;
+    margin-top: 20px;
+    font-weight: 700;
+}
