@@ -6,9 +6,13 @@ const second_player = document.querySelector('.second_player')
  
 result.textContent = "o'yin boshlanishi uchun tugmani bos!!!!!!!!!!!!!!!!!!!"
 
+function getrandomnumber(num) {
+    return Math.round(Math.random() * num);
+}
+
 btn.addEventListener("click", () => {
-    const first_random_number = Math.round(Math.random() * 2);
-    const second_random_number = Math.round(Math.random() * 2);
+    const first_random_number = getrandomnumber(2);
+    const second_random_number = getrandomnumber(2);
 
     if (first_random_number == 0) {
         first_player.setAttribute("src", "./img/paper.jpg" )
