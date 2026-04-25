@@ -10,15 +10,24 @@ function getrandomnumber(num) {
     return Math.round(Math.random() * num);
 }
 
+function setimgattribute( random_number, img )  {
+    if (random_number == 0) {
+        img.setAttribute("src", "./img/paper.jpg" )
+    }   else if (random_number == 1) {
+        img.setAttribute("src", "./img/rock.jpg" )
+    } else if (random_number == 2) {
+        img.setAttribute("src", "./img/qaychi.jpg" )
+    }
+}
+
 btn.addEventListener("click", () => {
     const first_random_number = getrandomnumber(2);
     const second_random_number = getrandomnumber(2);
 
-    if (first_random_number == 0) {
-        first_player.setAttribute("src", "./img/paper.jpg" )
-    }else if (first_random_number == 1) {
-        first_player.setAttribute("src", "./img/rock.jpg" )
-    } else if (first_random_number == 2) {
+    setimgattribute(first_random_number, first_player);
+    setimgattribute(second_random_number, second_player);
+
+    if (first_random_number == second_random_number) {
         first_player.setAttribute("src", "./img/qaychi.jpg" )
     }
 
